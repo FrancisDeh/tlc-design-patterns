@@ -1,13 +1,8 @@
-package com.company;
+package com.company.proxy;
 
-import com.company.bridge.*;
-import com.company.proxy.CachedYoutubeClass;
-import com.company.proxy.ThirdPartyYoutubeClass;
-
-public class Main {
+public class YoutubeManager {
 
     public static void main(String[] args) {
-
         // using only the third party library
         ThirdPartyYoutubeClass thirdPartyYoutubeClass = new ThirdPartyYoutubeClass();
         thirdPartyYoutubeClass.listVideos();
@@ -28,23 +23,5 @@ public class Main {
         cachedYoutubeClass.getVideoInfo("Boss Baby 2");
         cachedYoutubeClass.downloadVideo("Rango");
         cachedYoutubeClass.downloadVideo("Rango");
-
-        // create a tv
-        Device tv = new Tv();
-        //create the remote control with Tv to control
-        RemoteControl remoteControl = new RemoteControl(tv);
-        remoteControl.togglePower();
-        remoteControl.channelUp();
-        remoteControl.volumeDown();
-        remoteControl.togglePower();
-
-        System.out.println();
-
-        //create a radio
-        Device radio = new Radio();
-        //create a remote control with  the Radio to complete
-        AdvancedRemoteControl advancedRemoteControl = new AdvancedRemoteControl(radio);
-        advancedRemoteControl.togglePower();
-        advancedRemoteControl.mute();
     }
 }
