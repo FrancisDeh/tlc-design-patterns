@@ -4,7 +4,7 @@ public class YoutubeManager {
 
     public static void main(String[] args) {
         // using only the third party library
-        ThirdPartyYoutubeClass thirdPartyYoutubeClass = new ThirdPartyYoutubeClass();
+        ThirdPartyYoutubeClass thirdPartyYoutubeClass  = new ThirdPartyYoutubeClass();
         thirdPartyYoutubeClass.listVideos();
         thirdPartyYoutubeClass.listVideos();
         thirdPartyYoutubeClass.getVideoInfo("Boss Baby");
